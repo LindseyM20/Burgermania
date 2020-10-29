@@ -1,0 +1,29 @@
+{
+  "name": "burgermania",
+  "version": "1.0.0",
+  "description": "A burger logger with MySQL, Node, Express, Handlebars, and ORM",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "handlebars-helper-css": "^0.1.0",
+    "nodemon": "^2.0.6"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LindseyM20/Burgermania.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/LindseyM20/Burgermania/issues"
+  },
+  "homepage": "https://github.com/LindseyM20/Burgermania#readme"
+}
