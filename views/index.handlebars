@@ -1,45 +1,57 @@
 {{!-- Sets up the index.handlebars to have the template that Handlebars can render onto. --}}
-
-<h1>Burgermania!</h1>
-
-<h2>Burgers I would like!</h2>
-
-<ul>
-
-  {{#each burgers}}
-  {{#unless this.devoured}}
-  <li>
-    {{this.burger_name}}
-
-    <button class="devour-burger" data-id="{{this.id}}" data-devoured="{{this.devoured}}">DEVOUR!</button>
-    
-  </li>
-  {{!-- {{hbsObject.burgers devoured=false}} --}}
-  {{/unless}}
-  {{/each}}
-  
-</ul>
-
-<h2>Burgers that I've devoured!</h2>
-
-<ul>
-  {{#each burgers}}
-  {{#if this.devoured}}
-   <li>
-    {{this.burger_name}}
-  </li>
-  {{!-- {{hbsObject.burgers devoured=true}} --}}
-  {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Add a Burger</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="name">
+<div class="container">
+  <div class="row">
+    <h1>Burgermania!</h1>
+    <img src="/assets/img/burger3.png" alt="Kawaii burger" class="center" id="img">
   </div>
-  {{!-- Creates a button in index.handlebars that will submit the user input into the database. --}}
-  <button type="submit">Add Burger</button>
-</form>
+
+  <div class="row">
+    <div class="col-6 column">
+      <h2>Burgers I would like:</h2>
+
+      <ul>
+
+        {{#each burgers}}
+        {{#unless this.devoured}}
+        <li>
+          {{this.id}}. {{this.burger_name}}
+          <button class="devour-burger btn btn-outline-success btn-sm" data-id="{{this.id}}" data-devoured="{{this.devoured}}">DEVOUR!</button>
+
+        </li>
+        {{!-- {{hbsObject.burgers devoured=false}} --}}
+        {{/unless}}
+        {{/each}}
+
+      </ul>
+    </div>
+
+    <div class="col-6 column">
+      <h2>Burgers that I've devoured:</h2>
+
+      <ul>
+        {{#each burgers}}
+        {{#if this.devoured}}
+        <li>
+          {{this.id}}. {{this.burger_name}}
+        </li>
+        {{!-- {{hbsObject.burgers devoured=true}} --}}
+        {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="row add">
+    <h2>Add a Burger</h2>
+  
+    <form class="create-form">
+      <div class="form-group">
+        <label for="burg">Burger Name:</label>
+        <input type="text" id="burg" name="name">
+      </div>
+      {{!-- This button will submit the user input into the database. --}}
+      <button class="btn btn-outline-success" type="submit">Add Burger</button>
+    </form>
+  </div>
+</div>
