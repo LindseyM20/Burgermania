@@ -1,4 +1,3 @@
-// const { createConnection } = require("mysql");
 const connection = require("./connection");
 
 function printQuestionMarks(num) {
@@ -26,17 +25,7 @@ function objToSql(ob) {
 }
 
 const orm = {
-  // // Taken from activity 13 solved/config/orm.js
-  // selectAll: function(whatToSelect, tableInput) {
-  //   const queryString = "SELECT ?? FROM ??";
-  //   connection.query(queryString, [whatToSelect, tableInput],
-  //     function(err, result) {
-  //       if (err) throw err;
-  //       console.log(result);
-  //     });
-  // },
 
-  // Taken from activity 17 solved/config/orm.js
   selectAll: function (tableInput, cb) {
     let queryString = "SELECT * FROM " + tableInput + ";";
     console.log(queryString);
@@ -48,7 +37,7 @@ const orm = {
   },
 
   // insertOne:
-  create: function(table, cols, vals, cb) {
+  insertOne: function(table, cols, vals, cb) {
     let queryString = "INSERT INTO " + table;
 
     queryString += " (";
@@ -68,7 +57,7 @@ const orm = {
   },
 
   // updateOne: 
-  update: function (table, objColVals, condition, cb) {
+  updateOne: function (table, objColVals, condition, cb) {
     let queryString = "UPDATE " + table;
 
     queryString += " SET ";

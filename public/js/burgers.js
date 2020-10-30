@@ -1,4 +1,5 @@
 $(function () {
+  // When the Add a Burger form is submitted...
   $(".create-form").on("submit", function (event) {
     event.preventDefault();
 
@@ -21,26 +22,24 @@ $(function () {
     );
   });
 
-  // Send the PUT request
+  // When a Devour button is clicked...
   $(".devour-burger").on("click", function (event) {
     console.log("trying to change to devoured");
     event.preventDefault;
     let id = $(this).data("id");
-
     console.log(id);
+    
     let devour = true;
-    // let devour = $(this).data("devoured");
     let newState = { devoured: devour };
 
     // Send the PUT request.
     $.ajax("/api/burgers/" + id, {
       type: "PUT",
       id: id,
-      data: newState  // did have true here
+      data: newState  
     }).then(
       function () {
         console.log("changed devoured status to", newState);
-        // console.log("changed devoured status to", true);
         // Reload the page to get the updated list
         location.reload();
       }

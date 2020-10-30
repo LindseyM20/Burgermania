@@ -10,18 +10,15 @@
       <h2>Burgers I would like:</h2>
 
       <ul>
-
         {{#each burgers}}
         {{#unless this.devoured}}
         <li>
           {{this.id}}. {{this.burger_name}}
+          {{!-- This button will update the attached burger data to be devoured: true --}}
           <button class="devour-burger btn btn-outline-success btn-sm" data-id="{{this.id}}" data-devoured="{{this.devoured}}">DEVOUR!</button>
-
         </li>
-        {{!-- {{hbsObject.burgers devoured=false}} --}}
         {{/unless}}
         {{/each}}
-
       </ul>
     </div>
 
@@ -34,7 +31,6 @@
         <li>
           {{this.id}}. {{this.burger_name}}
         </li>
-        {{!-- {{hbsObject.burgers devoured=true}} --}}
         {{/if}}
         {{/each}}
       </ul>
