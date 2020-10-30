@@ -26,6 +26,7 @@ function objToSql(ob) {
 
 const orm = {
 
+  // Function to display burgers saved in database
   selectAll: function (tableInput, cb) {
     let queryString = "SELECT * FROM " + tableInput + ";";
     console.log(queryString);
@@ -36,7 +37,7 @@ const orm = {
     });
   },
 
-  // insertOne:
+  // Function to add a burger
   insertOne: function(table, cols, vals, cb) {
     let queryString = "INSERT INTO " + table;
 
@@ -56,7 +57,7 @@ const orm = {
     });
   },
 
-  // updateOne: 
+  // Function to update a burger to "devoured" 
   updateOne: function (table, objColVals, condition, cb) {
     let queryString = "UPDATE " + table;
 
