@@ -53,10 +53,15 @@ li {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.create-form {
+.add {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   filter: drop-shadow(5px 4px 4px #cc5835);
 }
+
+/* .card-body {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  filter: drop-shadow(5px 4px 4px #cc5835);
+} */
 
 .btn-sm {
   /* text-align: right; */
