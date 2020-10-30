@@ -8,14 +8,16 @@ body {
   text-align: center;
   margin: 0 auto;
   border-style: groove;
-  border-color: rgb(233, 167, 105);
-  background-color: #ffffff;
-  opacity: 0.6; 
-  color: black;
+  border-color: rgb(240, 172, 133);
+  background-color: #ffffff3d;
 }
 
-.center {
-  display: block;
+.column h2 {
+  padding: 3% 2%;
+}
+
+img, h1 {
+  display: inline-flex;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
@@ -25,16 +27,12 @@ h1, h2 {
   text-align: center;
   color: black;
   margin: 0 auto;
-  filter: drop-shadow(5px 4px 4px #4141a8);
+  filter: drop-shadow(5px 4px 4px #cc5835);
 }
 
 .row {
   padding: 5% 5%;
 }
-
-/* ul {
-  padding-top: 0%;
-} */
 
 li {
   text-align: justify;
@@ -55,11 +53,6 @@ li, .create-form {
 .add {
   text-align: center;
   /* margin: 0 auto; */
-}
-
-#img {
-  width: 50%;
-  display: inline-flexbox;
 }
 
 @media (min-width: 992px) {
