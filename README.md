@@ -25,6 +25,8 @@
   ## Usage
   Use this app to keep track of your burger bucket list and remember your favorite devoured burgers!
 
+  ![App in use](./public/assets/img/screenshot.png)
+
   ## Contributing
   [Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/version/2/0/code_of_conduct/code_of_conduct.md)
 
